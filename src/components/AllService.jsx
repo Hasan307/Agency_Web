@@ -1,4 +1,4 @@
-import React from "react";
+"use client"
 async function getData(){
   const res=await fetch(process.env.BASE_URL+"api/AllService");
   if(!res.ok){
@@ -35,7 +35,7 @@ async function AllService() {
                     data.map((item,i)=>{
                         return(
 
-              <div className="relative mb-4 w-full md:w-1/2 lg:w-1/3 px-4">
+              <div key={i.toString()} className="relative mb-4 w-full md:w-1/2 lg:w-1/3 px-4">
 
 
 

@@ -1,4 +1,3 @@
-import React from "react";
 async function getData(){
   const res=await fetch(process.env.BASE_URL+"api/WorkList");
   if(!res.ok){
@@ -29,7 +28,7 @@ const WorkList = async() => {
               data.map((item,i)=>{
                 return(
               
-              <div className="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-1/4 px-4">
+              <div key={i} className="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-1/4 px-4">
                 <span className="mb-4 md:mb-6 inline-block bg-green-100 p-3 text-green-500 rounded">
                 {item['step']}
                 </span>
