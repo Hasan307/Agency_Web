@@ -1,4 +1,3 @@
-"use client"
 async function getData(){
   const res=await fetch(process.env.BASE_URL+"api/AllService");
   if(!res.ok){
